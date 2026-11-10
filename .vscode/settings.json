@@ -1,34 +1,20 @@
 {
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "ssh": "Disabled",
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "username": "root",
-            "database": "hometown_geo",
-            "name": "MYSQL Local",
-            "password": ""
-        },
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "ssh": "Disabled",
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "PetAdoptionDB",
-            "username": "root",
-            "database": "pet_care_db",
-            "password": ""
-        }
-    ]
+  "sqltools.connections": [
+    {
+      "name": "Pet Care (local MySQL)",
+      "driver": "MySQL",
+      "server": "localhost",
+      "port": 3306,
+      "username": "root",
+      "database": "pet_care_db",
+      "askForPassword": true,
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50
+    }
+  ],
+  "files.trimTrailingWhitespace": true,
+  "editor.tabSize": 2
 }
