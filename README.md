@@ -1,6 +1,6 @@
 # Pet Adoption & Veterinary Care Management Database
 
-**Author:** Koushik Vasa
+**Authors:** Koushik Vasa, Varsana Ilango Gomathynaveena
 
 This project implements a fully normalized 3NF MySQL relational database for tracking pet shelter intakes, outcomes, adoptions, and veterinary care. It integrates real-world data from the Austin Animal Center (19,619 records) alongside synthetic data generated via Python to fulfill volume and testing requirements.
 
