@@ -5,7 +5,7 @@ from sqlalchemy import create_engine, text
 fake = Faker()
 
 
-engine = create_engine("mysql+mysqlconnector://root@localhost/pet_care_db")
+engine = create_engine("mysql+mysqlconnector://root:pluto123@localhost/pet_care_db")
 
 with engine.begin() as connection:
     # 2. Generate 1,000 Adopters

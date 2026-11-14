@@ -1,18 +1,19 @@
 {
   "sqltools.connections": [
     {
-      "name": "Pet Care (local MySQL)",
-      "driver": "MySQL",
-      "server": "localhost",
-      "port": 3306,
-      "username": "root",
-      "database": "pet_care_db",
-      "askForPassword": true,
       "mysqlOptions": {
         "authProtocol": "default",
         "enableSsl": "Disabled"
       },
-      "previewLimit": 50
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "Pet Care DB (Local)",
+      "username": "root",
+      "password": "pluto123",
+      "database": "mysql"
     }
   ],
   "files.trimTrailingWhitespace": true,
