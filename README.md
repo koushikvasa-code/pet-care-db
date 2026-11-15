@@ -53,6 +53,16 @@ Execute the Python script to map 1,000 synthetic adopters, clinics, veterinarian
 ```bash
 python3 generate_data.py
 ```
+### 5. Generate Adoption Application
+Execute the Python script to map 1,000 adoption applications, 500 approved applications, 200 rejected applications for historically adopted animals, and 300 pending applicationsfor available animals. It also creates 100 synthetic animals with the corresponding intake records:
+```bash
+python3 Data/generate_adoption_applications.py
+```
+### 6. Generate Adoptions
+Execute the Python script to create 500 completed adoption records from approved applications. Each adoption references the corresponding animal's intake record and uses the historical adoption outcome date:
+```bash
+python3 Data/generate_adoptions.py
+```
 
-### 5. Run Queries
+### 7. Run Queries
 With the database completely populated, run your query files from the `queries/` folder in your preferred database GUI or IDE to view the integrated results.
