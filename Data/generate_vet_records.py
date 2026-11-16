@@ -1,9 +1,21 @@
 import random
+from getpass import getpass
 from datetime import date, datetime, timedelta
 from sqlalchemy import create_engine, text
+from sqlalchemy.engine import URL
 
-# Connect to the local database
-engine = create_engine("mysql+mysqlconnector://root:pluto123@localhost/pet_care_db")
+# Securely prompt for the password
+password = getpass("Enter MySQL password: ")
+
+db_url = URL.create(
+    "mysql+mysqlconnector",
+    username="root",
+    password=password,
+    host="localhost",
+    database="pet_care_db"
+)
+
+engine = create_engine(db_url)
 
 with engine.begin() as conn:
     # 1. Populate Medications (if empty)

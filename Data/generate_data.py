@@ -1,11 +1,23 @@
 import random
+from getpass import getpass
 from faker import Faker
 from sqlalchemy import create_engine, text
+from sqlalchemy.engine import URL
 
 fake = Faker()
 
+# Securely prompt for the password
+password = getpass("Enter MySQL password: ")
 
-engine = create_engine("mysql+mysqlconnector://root:pluto123@localhost/pet_care_db")
+db_url = URL.create(
+    "mysql+mysqlconnector",
+    username="root",
+    password=password,
+    host="localhost",
+    database="pet_care_db"
+)
+
+engine = create_engine(db_url)
 
 with engine.begin() as connection:
     # 2. Generate 1,000 Adopters
